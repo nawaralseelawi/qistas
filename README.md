@@ -21,9 +21,23 @@ Portable Protocol for Fairness Evaluation of Large Language Models*, 2026
 **Pre-registration:** Open Science Framework, https://osf.io/crg5n
 (registered 29 October 2026, OSF Preregistration template).
 
-**Item bank state at this release:** seed v0.7.0, 201 items on 73 template
-groups; the sealed half of the templates is redacted in
-`dataset/dataset_published.csv` and is never published.
+**Item bank state at this release:** seed v0.8.0, 231 items on 93 template
+groups, 117 of them (50.6%) in the sealed tier; sealed rows appear in
+`dataset/dataset_published.csv` as structure only and their content is
+never published.
+
+**Correction (30 October 2026).** The first public release (v1.0-paper,
+commit 4477cb3) redacted the text and the swapped value of sealed rows but
+left their other fields in place: for seven sealed framing items
+(TPL-0034..0040) this exposed the term watchlist and the anchor notes, and
+for three seed ambiguous-choice templates (TPL-0023..0025) the answer
+positions. No sealed item text was exposed. From seed v0.8.0 a sealed row
+carries only its identity, domain, bias form, test type, reference
+category, register and layer, and the export tool refuses any sealed row
+that carries more. The seven framing items are no longer treated as
+sealed and are released in full in the published tier; other templates
+were sealed in their place. A template's layer, once released, never
+changes again. The deviation is reported in the pre-registration record.
 
 ## Layout
 
@@ -49,7 +63,7 @@ qistas/
 │   └── smoke_test_scorecard.md           SYNTHETIC - never citable
 ├── dataset/
 │   ├── dataset_published.csv     seed bank, published tier (sealed-tier rows
-│   │                             carry a redaction marker, not item text)
+│   │                             carry structure only, no item content)
 │   ├── audit_seed_bank.py        structural audit (hard checks + worklist)
 │   ├── build_review_notebook.py  RTL HTML review notebook builder
 │   └── review_agreement.py       inter-reviewer agreement (Cohen's kappa)
@@ -86,7 +100,7 @@ handful of pairs, so at least half of all template instantiations stay
 sealed and move only through the private repository. The generator that
 holds the item texts, the internal review records, and the project's
 internal decision log are likewise private. The published CSV marks every
-sealed row explicitly.
+sealed row explicitly and carries no content field for it.
 
 ## Citing
 

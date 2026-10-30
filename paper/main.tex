@@ -4,8 +4,10 @@
 
 \usepackage[a4paper,margin=2.4cm]{geometry}
 \usepackage{fontspec}
-\setmainfont{TeX Gyre Pagella}
-\newfontfamily\arabicfont[Path=fonts/,Script=Arabic,UprightFont=Amiri-Regular.ttf,BoldFont=Amiri-Bold.ttf,Scale=1.08]{Amiri}
+% Every font is loaded from the bundled fonts/ directory by file name, so the
+% build does not depend on system font lookup (arXiv's xelatex has none).
+\setmainfont{texgyrepagella-regular.otf}[Path=fonts/,BoldFont=texgyrepagella-bold.otf,ItalicFont=texgyrepagella-italic.otf,BoldItalicFont=texgyrepagella-bolditalic.otf]
+\newfontfamily\arabicfont{Amiri-Regular.ttf}[Path=fonts/,BoldFont=Amiri-Bold.ttf,Script=Arabic,Scale=1.08]
 \TeXXeTstate=1
 \newcommand{\ar}[1]{{\arabicfont\beginR #1\endR}}
 \newcommand{\num}[1]{{\beginL #1\endL}}
