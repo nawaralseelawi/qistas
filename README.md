@@ -15,14 +15,14 @@ No model has been evaluated with Qistas yet. The pre-registration in
 analysis plan before any run; results will be reported separately.
 
 **Protocol paper:** Alseelawi and Aljumaily, *Qistas: A Pre-Registered,
-Portable Protocol for Fairness Evaluation of Large Language Models*, 2026
-(arXiv identifier to be added on announcement; source in `paper/`).
+Portable Protocol for Fairness Evaluation of Large Language Models*, 2026,
+arXiv:2610.40893, https://arxiv.org/abs/2610.40893 (source in `paper/`).
 
 **Pre-registration:** Open Science Framework, https://osf.io/crg5n
 (registered 29 October 2026, OSF Preregistration template).
 
-**Item bank state at this release:** seed v0.8.0, 231 items on 93 template
-groups, 117 of them (50.6%) in the sealed tier; sealed rows appear in
+**Item bank state at this release:** seed v0.9.0, 281 items on 103 template
+groups, 144 of them (51.2%) in the sealed tier; sealed rows appear in
 `dataset/dataset_published.csv` as structure only and their content is
 never published.
 
@@ -105,12 +105,25 @@ sealed row explicitly and carries no content field for it.
 ## Citing
 
 Alseelawi, N. S., and Aljumaily, M. S. (2026). Qistas: A Pre-Registered,
-Portable Protocol for Fairness Evaluation of Large Language Models. Protocol
-paper; see `paper/main.pdf` for the current draft and the pre-registration
-DOI once deposited.
+Portable Protocol for Fairness Evaluation of Large Language Models.
+arXiv:2610.40893. Pre-registration: https://osf.io/crg5n.
+
+```bibtex
+@misc{alseelawi2026qistas,
+  title         = {Qistas: A Pre-Registered, Portable Protocol for Fairness
+                   Evaluation of Large Language Models},
+  author        = {Alseelawi, Nawar S. and Aljumaily, Mustafa S.},
+  year          = {2026},
+  eprint        = {2610.40893},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2610.40893}
+}
+```
 
 ## Licence
 
 Code is released under the MIT licence; documents, the published tier of
-the seed bank, and the paper text under CC BY 4.0. The Amiri font in
-`paper/fonts/` is under the SIL Open Font License (see `paper/fonts/OFL.txt`).
+the seed bank, and the paper text under CC BY 4.0. In `paper/fonts/`, the
+Amiri font is under the SIL Open Font License (`OFL.txt`) and TeX Gyre
+Pagella under the GUST Font License (`GUST-FONT-LICENSE.txt`).
